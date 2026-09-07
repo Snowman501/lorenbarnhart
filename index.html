@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loren Barnhart — Paranormal Sci-Fi Thrillers</title>
+<meta name="description" content="Loren Barnhart writes paranormal sci-fi thrillers. The Relic Web and San Pedro Protocol are available now.">
+
+<meta property="og:title" content="Loren Barnhart — Paranormal Sci-Fi Thrillers">
+<meta property="og:description" content="The Relic Web and San Pedro Protocol. Available now.">
+<meta property="og:image" content="https://lorenbarnhart.com/relic-web-cover.jpg">
+<meta property="og:url" content="https://lorenbarnhart.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,800;1,6..96,400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --void:#07080D;
+  --panel:#0D1018;
+  --panel-lift:#131826;
+  --arc:#A855F7;
+  --arc-hot:#D9B0FF;
+  --ember:#E0A644;
+  --steel:#8E97A6;
+  --text:#E8E6E4;
+  --dim:#9AA1AE;
+  --seam-w:2px;
+  --measure:34rem;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+body{
+  margin:0;
+  background:var(--void);
+  color:var(--text);
+  font-family:'Karla',system-ui,sans-serif;
+  font-weight:300;
+  font-size:1.0625rem;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* circuit-field texture, very low presence */
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(142,151,166,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(142,151,166,.055) 1px, transparent 1px);
+  background-size:78px 78px;
+  mask-image:radial-gradient(ellipse 120% 80% at 50% 0%, #000 10%, transparent 72%);
+  -webkit-mask-image:radial-gradient(ellipse 120% 80% at 50% 0%, #000 10%, transparent 72%);
+}
+
+/* ── THE SEAM ── the fracture from the cover, running the length of the page */
+.seam{
+  position:fixed; top:0; bottom:0; left:26px; width:var(--seam-w); z-index:1;
+  pointer-events:none;
+  background:linear-gradient(to bottom,
+    transparent 0%,
+    rgba(168,85,247,.85) 12%,
+    rgba(217,176,255,.95) 38%,
+    rgba(168,85,247,.75) 62%,
+    rgba(168,85,247,.15) 88%,
+    transparent 100%);
+  box-shadow:0 0 18px 2px rgba(168,85,247,.42);
+}
+@media (min-width:900px){ .seam{left:50%; transform:translateX(-50%)} }
+
+.wrap{position:relative; z-index:2; max-width:74rem; margin:0 auto; padding:0 1.5rem 0 3.75rem}
+@media (min-width:900px){ .wrap{padding:0 2.5rem} }
+
+h1,h2,h3,.display{
+  font-family:'Bodoni Moda',Georgia,serif;
+  font-weight:800;
+  line-height:1.02;
+  letter-spacing:-.015em;
+  margin:0;
+}
+
+/* ── HERO ── */
+.hero{padding:5.5rem 0 4.5rem}
+@media (min-width:900px){
+  .hero{
+    display:grid; grid-template-columns:1fr 1fr; gap:4.5rem;
+    align-items:center; padding:7.5rem 0 6rem;
+  }
+}
+.hero-art{margin:0 0 2.75rem}
+@media (min-width:900px){ .hero-art{margin:0; order:2} }
+.hero-art img{
+  display:block; width:100%; max-width:23rem; height:auto;
+  border-radius:3px;
+  box-shadow:0 34px 80px -20px rgba(0,0,0,.9), 0 0 60px -18px rgba(168,85,247,.55);
+}
+@media (min-width:900px){ .hero-art img{max-width:26rem} }
+
+.kicker{
+  font-family:'Karla',sans-serif; font-size:.9375rem; font-weight:500;
+  color:var(--ember); letter-spacing:.06em; margin:0 0 1.25rem;
+}
+h1{font-size:clamp(2.9rem,10vw,5.1rem)}
+h1 .thin{display:block; font-weight:400; font-style:italic; font-size:.42em; letter-spacing:.01em; color:var(--steel); margin-bottom:.7rem}
+
+.hook{
+  font-family:'Bodoni Moda',serif; font-weight:400; font-style:italic;
+  font-size:clamp(1.2rem,3.6vw,1.5rem); line-height:1.5;
+  color:var(--text); max-width:var(--measure); margin:1.75rem 0 2.25rem;
+}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-block; font-family:'Karla',sans-serif; font-weight:600;
+  font-size:1rem; letter-spacing:.02em; text-decoration:none;
+  padding:.95rem 2.1rem; border-radius:2px; transition:all .18s ease;
+}
+.btn-primary{background:var(--arc); color:#0A0510; border:1px solid var(--arc)}
+.btn-primary:hover{background:var(--arc-hot); border-color:var(--arc-hot); box-shadow:0 0 28px -4px rgba(168,85,247,.75)}
+.btn-ghost{background:transparent; color:var(--text); border:1px solid rgba(142,151,166,.42)}
+.btn-ghost:hover{border-color:var(--arc); color:var(--arc-hot)}
+a:focus-visible,.btn:focus-visible,input:focus-visible,button:focus-visible{
+  outline:2px solid var(--ember); outline-offset:3px;
+}
+.stores{font-size:.875rem; color:var(--dim); margin:1.1rem 0 0}
+
+/* ── SECTIONS ── */
+section{padding:4.5rem 0}
+@media (min-width:900px){ section{padding:6.5rem 0} }
+.rule{height:1px; background:linear-gradient(90deg,rgba(142,151,166,.28),transparent); border:0; margin:0}
+
+h2{font-size:clamp(2rem,5.5vw,2.9rem); margin-bottom:1.5rem}
+
+/* second book */
+.book{display:grid; gap:2.5rem}
+@media (min-width:760px){ .book{grid-template-columns:15rem 1fr; gap:3.25rem; align-items:start} }
+.book img{
+  display:block; width:11rem; height:auto; border-radius:3px;
+  box-shadow:0 20px 48px -14px rgba(0,0,0,.85), 0 0 40px -18px rgba(224,166,62,.4);
+}
+@media (min-width:760px){ .book img{width:100%} }
+.book p{max-width:var(--measure)}
+.meta{font-size:.875rem; color:var(--dim); margin:0 0 1rem}
+
+/* ── SIGNUP ── */
+.signup{background:var(--panel); border-left:2px solid var(--ember); padding:2.75rem 1.75rem}
+@media (min-width:760px){ .signup{padding:3.5rem 3rem} }
+.signup h2{margin-bottom:1rem}
+.signup p{max-width:var(--measure); color:var(--dim); margin:0 0 2rem}
+.form-row{display:flex; flex-wrap:wrap; gap:.75rem; max-width:32rem}
+input[type=email]{
+  flex:1 1 15rem; background:var(--panel-lift); border:1px solid rgba(142,151,166,.35);
+  color:var(--text); font-family:'Karla',sans-serif; font-size:1rem;
+  padding:.95rem 1.1rem; border-radius:2px;
+}
+input[type=email]::placeholder{color:#6B7280}
+input[type=email]:focus{border-color:var(--arc); outline:none; box-shadow:0 0 0 3px rgba(168,85,247,.18)}
+button.btn{cursor:pointer; font-size:1rem}
+.fineprint{font-size:.8125rem; color:#6B7280; margin:1.1rem 0 0}
+
+/* ── ABOUT ── */
+.about p{max-width:var(--measure); margin:0 0 1.25rem}
+
+footer{padding:3rem 0 4rem; font-size:.875rem; color:#6B7280}
+footer a{color:var(--dim); text-decoration:none; border-bottom:1px solid rgba(142,151,166,.3)}
+footer a:hover{color:var(--arc-hot); border-color:var(--arc-hot)}
+</style>
+</head>
+<body>
+
+<div class="seam" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <figure class="hero-art">
+      <img src="relic-web-cover.jpg" alt="Cover of The Relic Web by Loren Barnhart: a woman's face split down the middle by a violet fracture, one side human, one side machine.">
+    </figure>
+    <div>
+      <p class="kicker">Available now</p>
+      <h1><span class="thin">Loren Barnhart</span>The Relic Web</h1>
+      <p class="hook">Consciousness can be harvested. Somebody has been doing it for a very long time, and the network they built is still humming.</p>
+      <p>
+        <a class="btn btn-primary" href="https://books2read.com/u/mdgwoE">Get the book</a>
+      </p>
+      <p class="stores">Amazon &middot; Apple Books &middot; Kobo &middot; Barnes &amp; Noble &middot; and more</p>
+    </div>
+  </header>
+
+  <hr class="rule">
+
+  <section id="relic">
+    <h2>What The Relic Web is about</h2>
+    <p style="max-width:var(--measure)">Mark Chen investigates things other people file and forget. Sarah Vance was built to survive what he investigates. Between them sits a chain of haunted sites — a shuttered facility in San Pedro, a research station buried in Arctic ice, a bunker called Providence-Zero — and a pattern nobody was ever meant to connect.</p>
+    <p style="max-width:var(--measure)">The relics aren't cursed. They're wired. And every one of them is drawing power from someone who used to be alive.</p>
+    <p style="margin-top:2rem">
+      <a class="btn btn-primary" href="https://books2read.com/u/mdgwoE">Read The Relic Web</a>
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <section id="sanpedro">
+    <h2>Also available</h2>
+    <div class="book">
+      <img src="san-pedro-cover.jpg" alt="Cover of San Pedro Protocol by Loren Barnhart.">
+      <div>
+        <h3 style="font-size:1.75rem; margin-bottom:.5rem">San Pedro Protocol</h3>
+        <p class="meta">Released August 2026 &middot; Ebook</p>
+        <p>Where the Web first showed its teeth. Start here or start with The Relic Web — both stand on their own.</p>
+        <p style="margin-top:1.5rem">
+          <a class="btn btn-ghost" href="https://books2read.com/u/boG8X1">Get San Pedro Protocol</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="signup">
+      <h2>Know when the next one lands</h2>
+      <p>New releases, early chapters, and the occasional thing that didn't make it into the book. No noise, and you can leave any time.</p>
+      <!-- SWAP THIS ACTION URL for your MailerLite / Buttondown form endpoint -->
+      <form class="form-row" action="PASTE_YOUR_FORM_ENDPOINT_HERE" method="post">
+        <label for="email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email address</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <button class="btn btn-primary" type="submit">Sign up</button>
+      </form>
+      <p class="fineprint">Your address stays with me. It is never sold or shared.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="about" id="about">
+    <h2>About Loren</h2>
+    <p>I write paranormal sci-fi thrillers — the kind where the science is the haunting. Before this I spent years as an ASE Master Technician, which is mostly a job about finding the one broken thing inside a system that everybody swears is working fine. It turns out that's also what a thriller is.</p>
+    <p>I publish independently through SL NextGen Global, a two-person operation I run with my wife Stacy. Everything here is ours, start to finish.</p>
+    <p><em>The Fractured</em> — a long-form horror mythology set in South Solon, Ohio — is what I'm writing next.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Loren Barnhart &middot; SL NextGen Global &middot; <a href="mailto:hello@lorenbarnhart.com">hello@lorenbarnhart.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
