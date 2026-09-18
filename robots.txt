@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lorenbarnhart.vercel.app/sitemap.xml
