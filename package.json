@@ -1,0 +1,14 @@
+{
+  "name": "loren-barnhart-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "1.0.2"
+  }
+}

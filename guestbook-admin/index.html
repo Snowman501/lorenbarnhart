@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guestbook moderation | Loren Barnhart</title><meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/guestbook.css">
+<script src="/assets/guestbook.js" defer></script></head><body>
+<main class="guestbook" data-guestbook="admin"><p><a href="/she-said-hi/">Back to the story</a></p>
+<h1>Guestbook moderation</h1><p>Review messages before they appear on the website.</p>
+<form><label>Admin password<input type="password" name="password" autocomplete="current-password" required></label>
+<div><button class="button" type="submit">Sign in</button></div></form>
+<p class="status" data-status role="status" aria-live="polite"></p>
+<div data-panel hidden><label>Show messages<select data-view><option value="pending">Pending approval</option><option value="approved">Published</option></select></label>
+<div class="actions"><button class="button alt" type="button" data-refresh>Refresh</button><button class="button alt" type="button" data-logout>Sign out</button></div></div>
+<div data-list></div><button class="button alt" type="button" data-more hidden>Load older messages</button>
+<noscript>Please enable JavaScript to moderate the guestbook.</noscript>
+</main></body></html>
