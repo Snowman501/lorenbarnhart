@@ -17,6 +17,19 @@
       ]
     },
     {
+      "source": "/subscribers-admin/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
       "source": "/author-help-admin/:path*",
       "headers": [
         {

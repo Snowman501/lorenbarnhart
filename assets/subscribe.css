@@ -1,0 +1,23 @@
+.subscribe form{display:grid;gap:1rem;margin:1.5rem 0;max-width:560px}
+.subscribe label{display:grid;gap:.4rem}
+.subscribe .optional{color:var(--muted,#bac2d1);font-size:.9em}
+.subscribe input:not([type=checkbox]){width:100%;box-sizing:border-box;background:#111827;color:var(--text,#f0eee9);border:1px solid #73809a;border-radius:6px;padding:.8rem;font:inherit}
+.subscribe .trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.subscribe .status{min-height:1.6em}
+.subscribe button{cursor:pointer}
+.subscribe button:disabled{opacity:.6;cursor:wait}
+.subscribe :focus-visible{outline:3px solid var(--amber,#e8b967);outline-offset:3px}
+.subscribe-admin{max-width:760px;margin:3rem auto;padding:2rem 20px;color:var(--text,#f0eee9)}
+.subscribe-admin form{display:grid;gap:1rem;margin:1.5rem 0;max-width:560px}
+.subscribe-admin label{display:grid;gap:.4rem}
+.subscribe-admin input:not([type=checkbox]){width:100%;box-sizing:border-box;background:#111827;color:var(--text,#f0eee9);border:1px solid #73809a;border-radius:6px;padding:.8rem;font:inherit}
+.subscribe-admin .status{min-height:1.6em}
+.subscribe-admin .help{color:var(--muted,#bac2d1);font-size:.95rem}
+.subscribe-admin .actions{margin:1rem 0}
+.subscribe-admin button{cursor:pointer}
+.subscribe-admin button:disabled{opacity:.6;cursor:wait}
+.subscribe-admin [hidden]{display:none!important}
+.subscribe-admin :focus-visible{outline:3px solid var(--amber,#e8b967);outline-offset:3px}
+.subscriber-card{padding:1.2rem;margin:1rem 0;border:1px solid var(--edge,#303c53);border-radius:8px;background:var(--panel,#111827)}
+.subscriber-card h3{overflow-wrap:anywhere;margin:.2rem 0}
+.subscriber-card p{color:var(--muted,#bac2d1);font-size:.95rem;margin:.3rem 0 .8rem}
